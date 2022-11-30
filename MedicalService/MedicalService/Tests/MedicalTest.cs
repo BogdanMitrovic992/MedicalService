@@ -1,7 +1,7 @@
 using MedicalService.Driver;
 using MedicalService.Page;
 
-namespace MedicalService
+namespace MedicalService.Tests
 {
     public class Tests
     {
@@ -32,8 +32,7 @@ namespace MedicalService
             medicalPage.Date.SendKeys("25/12/2022");
             medicalPage.ButtonApp.Submit();
 
-            Assert.That("Apointment Confirmation",is EqualTo(medicalPage.Confirm.Text));
-           
+            Assert.That("Appointment Confirmation", Is.EqualTo(medicalPage.Confirm.Text));
 
 
         }
